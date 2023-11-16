@@ -1,4 +1,4 @@
-//validation/checkChinese.js
+//validation/checkDimSums.js
 const checkName = (req, res, next) => {
     if(req.body.name){
         return next()
@@ -8,11 +8,11 @@ const checkName = (req, res, next) => {
 }
 //
 const checkBoolean = (req, res, next) => {
-    const fav = req.body.is_favorite
+    const fav = req.body.savory
     if (typeof fav === 'boolean') {
         next()
     }else {
-        res.status(400).json({ error: 'is_favorite must be type boolean'})
+        res.status(400).json({ error: 'savory must be type boolean'})
      }
     }
 

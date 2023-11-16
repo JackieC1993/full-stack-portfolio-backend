@@ -1,4 +1,4 @@
-const db = require('../db/db.ConFig');
+const db = require('../db/dbConfig.js');
 
 
 
