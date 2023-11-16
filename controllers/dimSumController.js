@@ -6,8 +6,8 @@ const { checkName, checkBoolean } = require('../validations/checkDimSums')
 
 dimsumsRouter.get("/", async (req, res) => {
   const allDimSums = await getAllDimSums();
-  if (getAllDimSums[0]) {
-    res.status(200).json(getAllDimSums);
+  if (allDimSums[0]) {
+    res.status(200).json(allDimSums);
   } else {
     res.status(500).json({ error: "server error" });
   }
@@ -43,7 +43,7 @@ dimsumsRouter.put("/:id",checkName, checkBoolean, async (req, res) => {
     const {id} = req.params;
     const body = req.body
     const updatedDimSums = await updateDimSums(id, body);
-    res.status(200).json(updateDimSums)
+    res.status(200).json(updatedDimSums)
 })
     
 
