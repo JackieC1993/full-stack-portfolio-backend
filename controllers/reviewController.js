@@ -3,7 +3,7 @@ const express = require("express");
 //child model gets mergeParams
 const reviews = express.Router({mergeParams: true});
 
-const { getDimsum} = require("../queries/DimSums");
+const { getDimSumsById} = require("../queries/DimSums");
 
 
 // Queries
@@ -13,16 +13,16 @@ const {
   newReview,
   deleteReview,
   updateReview,
-} = require("../queries/reviews");
+} = require("../queries/review");
 
 // INDEX
 reviews.get("/", async (req, res) => {
   const { dimsums_id } = req.params;
   const allReviews = await getAllReviews(dimsums_id);
 
-  const dimsums = await getDimsum(dimsums_id)
+  const dimsums = await getDimSumsById(dimsums_id)
 
-  if (allReviews[0]) {
+  if (dimsums.id) {
     res.status(200).json({...dimsums, allReviews});
   } else {
     res.status(500).json({ error: "server error" });

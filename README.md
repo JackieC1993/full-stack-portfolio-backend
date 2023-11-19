@@ -1,8 +1,8 @@
 Welcome to the Backend DimSums Repository
 
+<img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiMtsjCPVSK9xtfYiWPb2QFN0C8uq6W4pBzw&usqp=CAU" width="300">
+
 Dimsums Backend Repository Structure:
-
-
 Folder Structure:
 src/: Contains the source code for the backend.
 config/: Configuration files for the database, environment variables, etc.
@@ -64,4 +64,3 @@ Now, you should be able to use your dimsums app. The app is set up with basic CR
 /dimsums/new: Add a new dimsum.
 /dimsums/:id: View details of a specific dimsum.
 /dimsums/:id/edit: Edit a specific dimsum.
-The API server and the React front-end should be running concurrently. If you encounter any issues or have specific requirements, feel free to ask for further assistance!

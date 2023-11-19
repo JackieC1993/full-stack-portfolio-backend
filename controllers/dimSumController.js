@@ -1,8 +1,9 @@
 const express = require("express");
 const { getAllDimSums, getDimSumsById, createDimSums, deleteDimSums, updateDimSums } = require("../queries/DimSums");
 const dimsumsRouter = express.Router();
+const reviewsController = require('./reviewController')
 const { checkName, checkBoolean } = require('../validations/checkDimSums')
-
+dimsumsRouter.use("/:dimsums_id/reviews", reviewsController)
 
 dimsumsRouter.get("/", async (req, res) => {
   const allDimSums = await getAllDimSums();
