@@ -12,7 +12,7 @@ const checkBoolean = (req, res, next) => {
     if (typeof fav === 'boolean') {
         next()
     }else {
-        res.status(400).json({ error: 'savory must be type boolean'})
+        res.status(400).json({ error: 'savory must be a boolean'})
      }
     }
 

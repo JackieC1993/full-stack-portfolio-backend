@@ -14,3 +14,12 @@ CREATE TABLE dimsums
     size TEXT
 );
 
+CREATE TABLE reviews
+(
+  id SERIAL PRIMARY KEY,
+  reviewer TEXT NOT NULL,
+  content TEXT NOT NULL,
+  rating NUMBER,
+  dimsums_id INTEGER REFERENCES dimsums(id) ON DELETE CASCADE
+)
+

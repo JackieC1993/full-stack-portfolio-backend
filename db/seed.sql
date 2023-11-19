@@ -12,3 +12,13 @@ VALUES
 ('Egg Tart', 6.90, 'egg custard filling and super flaky, shortbread-like crust.', 'super popular sweet and savory dessert', 4, false, 'small'),
 ('Bo lo bao', 7.50,  ' thick and crispy crust topping over a sweet egg-dough and filled with a silky custard center', 'popular in Hong Kong that it officially labeled as part of the city cultural heritage', 5, false, 'small'),
 ('shrimp lollipops', 10.00, 'made from a de-shelled crab claw or minced shrimp that coated in a breading layer, and deep-fried', 'The claw and the sugarcane are used as “lollipop” holders and can be dipped into soy sauce', 9, true, 'large');
+
+INSERT INTO reviews (reviewer,content,rating,dimsums_id)
+VALUES
+
+('John Cena', 'This food is on fire!', 5, 1 ),
+('Natalya Nedihart', 'I will recommend this food to my friend', 5, 2),
+('Carmella Staten ', 'This food is pretty lit' , 4, 3),
+('Bart Gunn', 'Not my vibe eating here, too greasy' ,2, 4),
+('Jay White', 'Bloody hell my food is not great' 2, 5),
+('MJF', 'New York loves diversity like DimSums', 5, 6)

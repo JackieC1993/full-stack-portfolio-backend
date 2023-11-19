@@ -26,8 +26,8 @@ dimsumsRouter.get('/:id', async (req, res) => {
 
 dimsumsRouter.post('/',checkName,checkBoolean, async (req, res) => {
     const body = req.body
-    const color = await createDimSums(body);
-    res.status(200).json(color)
+    const dimsums = await createDimSums(body);
+    res.status(200).json(dimsums)
 })
 dimsumsRouter.delete('/:id', async (req, res) => {
     const {id} = req.params;
