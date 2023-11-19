@@ -1,42 +1,42 @@
 // Dependencies
 const express = require("express");
 //child model gets mergeParams
-const reviewController = express.Router({mergeParams: true});
+const reviews = express.Router({mergeParams: true});
 
-const { getDimSumsById} = require("../queries/DimSums");
+const { getDimsum} = require("../queries/DimSums");
 
 
 // Queries
 const {
-  getDimSumsById,
-  getallDimSums,
-  newDimSums,
-  deleteDimSums
-  updateDimSums,
-} = require("../queries/DimSums");
+  getAllReviews,
+  getReview,
+  newReview,
+  deleteReview,
+  updateReview,
+} = require("../queries/reviews");
 
 // INDEX
-dimsums.get("/", async (req, res) => {
+reviews.get("/", async (req, res) => {
   const { dimsums_id } = req.params;
-  const getallDimSums = await getallDimSums(dimsums_id);
+  const allReviews = await getAllReviews(dimsums_id);
 
-  const dimsums = await getDimSumsById(dimsums_id)
+  const dimsums = await getDimsum(dimsums_id)
 
-  if (all[0]) {
-    res.status(200).json({...dimsums, allDimSums});
+  if (allReviews[0]) {
+    res.status(200).json({...dimsums, allReviews});
   } else {
     res.status(500).json({ error: "server error" });
   }
 });
 
 // SHOW
-dimsums.get("/:id", async (req, res) => {
+reviews.get("/:id", async (req, res) => {
   const {dimsums_id, id} = req.params;
-  const dimsum = await getDimSumsReview(id);
-  const dimsums = await getDimSumsById(dimsums_id);
+  const review = await getReview(id);
+  const dimsums = await getDimsum(dimsums_id);
 
   if (review) {
-    res.json({...bookmark, review});
+    res.json({...dimsums, review});
   } else {
     res.status(404).json({ error: "not found" });
   }
@@ -44,8 +44,8 @@ dimsums.get("/:id", async (req, res) => {
 
 // UPDATE
 reviews.put("/:id", async (req, res) => {
-  const { id, bookmark_id } = req.params;
-  const updatedReview = await updateReview({bookmark_id, id, ...req.body});
+  const { id, dimsums_id } = req.params;
+  const updatedReview = await updateReview({dimsums_id, id, ...req.body});
   if (updatedReview.id) {
     res.status(200).json(updatedReview);
   } else {
@@ -54,8 +54,8 @@ reviews.put("/:id", async (req, res) => {
 });
 
 reviews.post("/", async (req, res) => {
-  const { bookmark_id, id } = req.params;
-  const review = await newReview({bookmark_id,...req.body});
+  const { dimsums_id} = req.params;
+  const review = await newReview({dimsums_id,...req.body});
   res.status(200).json(review);
 });
 
@@ -70,6 +70,5 @@ reviews.delete("/:id", async (req, res) => {
   }
 });
 
-
-module.exports = reviewController;
+module.exports = reviews;
 
