@@ -15,10 +15,9 @@ VALUES
 
 INSERT INTO reviews (reviewer,content,rating,dimsums_id)
 VALUES
-
 ('John Cena', 'This food is on fire!', 5, 1 ),
 ('Natalya Nedihart', 'I will recommend this food to my friend', 5, 2),
 ('Carmella Staten ', 'This food is pretty lit' , 4, 3),
 ('Bart Gunn', 'Not my vibe eating here, too greasy' ,2, 4),
 ('Jay White', 'Bloody hell my food is not great', 2, 5),
-('MJF', 'New York loves diversity like DimSums', 5, 6)
+('MJF', 'New York loves diversity like DimSums', 5, 6);

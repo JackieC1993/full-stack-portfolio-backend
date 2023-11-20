@@ -21,5 +21,5 @@ CREATE TABLE reviews
   content TEXT NOT NULL,
   rating INTEGER,
   dimsums_id INTEGER REFERENCES dimsums(id) ON DELETE CASCADE
-)
+);
 
