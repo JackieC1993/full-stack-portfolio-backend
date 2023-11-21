@@ -18,6 +18,7 @@ dimsumsRouter.get("/", async (req, res) => {
 dimsumsRouter.get('/:id', async (req, res) => {
     const {id} = req.params;
     const oneDimSums = await getDimSumsById(id);
+    console.log(oneDimSums)
     if (oneDimSums) {
         res.status(200).json(oneDimSums);
         } else {
