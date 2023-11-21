@@ -1,7 +1,7 @@
 DROP DATABASE IF EXISTS dimsums_dev;
 CREATE DATABASE dimsums_dev; 
 \c dimsums_dev;
-
+DROP TABLE dimsums;
 CREATE TABLE dimsums
 (
     id SERIAL PRIMARY KEY,
@@ -13,7 +13,7 @@ CREATE TABLE dimsums
     savory BOOLEAN,
     size TEXT
 );
-
+DROP TABLE reviews;
 CREATE TABLE reviews
 (
   id SERIAL PRIMARY KEY,
