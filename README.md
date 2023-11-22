@@ -38,7 +38,7 @@ Documentation:
 
 README.md: Instructions for setting up and running the backend.
 
-Git Clone this repository: https://github.com/JackieC1993/full-stack-portfolio-backend.git
+Git Clone this repository:https://github.com/JackieC1993/full-stack-portfolio-backend.git
 Cd to this repository: https://github.com/JackieC1993/full-stack-portfolio-backend.git
 npm install express @4
 npm install pg-promise
